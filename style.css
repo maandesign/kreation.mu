@@ -1,41 +1,72 @@
-#home{
-    content: "";
-    /* background: rgba(0, 0, 0, 0.6); */
-    position: absolute;
-    bottom: 0;
-    top: 0;
-    left: 0;
-    right: 0;
-}
-
-#home .btn-get-started {
-    font-family: "Raleway", sans-serif;
-    font-weight: 500;
-    font-size: 16px;
-    letter-spacing: 1px;
-    display: inline-block;
-    padding: 10px 30px;
-    border-radius: 4px;
-    transition: 0.5s;
-    margin-top: 30px;
-    color: #fff;
-    background: #e03a3c;
-    border: 2px solid black;
-}
-
-.back-img {
-    background-image: url(images/marketing.jpg);
+/* Custom CSS for transparent sticky navigation bar */
+.bg-image {
+    background-image: url('images/back-img.jpg'); /* Replace 'your-image-url.jpg' with your image URL */
     background-size: cover;
-    background-position: center !important;
-    background-attachment: fixed;
+    background-position: center;
     height: 100vh;
 }
 
-nav{
-    z-index: 9;
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
 }
 
-.i-con{
-    font-size: 18px;
-    padding: 0px 10px 0px 0px;
+.navbar-scrolled {
+    background-color: white !important;
+    transition: background-color 0.3s ease;
 }
+
+.navbar-scrolled .navbar-nav .nav-link {
+    color: black !important; /* Change the color of the links to black when navbar is scrolled */
+}
+
+.navbar-scrolled .navbar-nav .nav-link:hover {
+    color: #07B0F2 !important; /* Change the color of the links to black when navbar is scrolled */
+}
+
+.navbar-brand img.logo {
+    display: block;
+}
+
+.navbar-brand img.logo-scrolled {
+    display: none;
+}
+
+.navbar-scrolled .navbar-brand img.logo {
+    display: none;
+}
+
+.navbar-scrolled .navbar-brand img.logo-scrolled {
+    display: block;
+}
+
+/* Custom CSS for navbar with padding */
+.navbar {
+    padding-top: 18px; /* Add padding to the top of the navbar on the home page */
+    padding-bottom: 18px;
+  }
+
+  /* Custom CSS for scrollbar */
+::-webkit-scrollbar {
+    width: 12px; /* Width of the scrollbar */
+  }
+  
+  /* Track (background) */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Color of the scrollbar track */
+  }
+  
+  /* Handle (thumb) */
+  ::-webkit-scrollbar-thumb {
+    background: #07B0F2; /* Color of the scrollbar thumb */
+  }  
+
+@media (max-width: 767px) {
+    .container {
+    padding-left: 25px;
+    padding-right: 25px;
+    }
+}
+
