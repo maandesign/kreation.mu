@@ -42,7 +42,7 @@
 .toggler-icon{
     width: 28px;
     height: 1.5px;
-    background-color: #0FB2F2;
+    background-color: black;
     display: block;
     transition: all 0.3s;
 }
@@ -53,17 +53,16 @@
 }
 
 /* State when navbar is opened (START) */
-.navbar-toggler .top-bar {
-    transform: rotate(-45deg) translate(-5px,6px);
+.navbar-toggler[aria-expanded="true"] .top-bar {
+    transform: rotate(-45deg) translate(-5px, 6px);
 }
 
-.navbar-toggler .middle-bar {
+.navbar-toggler[aria-expanded="true"] .middle-bar {
     opacity: 0;
-    filter: alpha(opacity=0);
 }
 
-.navbar-toggler .bottom-bar {
-    transform: rotate(45deg) translate(-4px,-6px);
+.navbar-toggler[aria-expanded="true"] .bottom-bar {
+    transform: rotate(45deg) translate(-4px, -6px);
 }
 /* State when navbar is opened (END) */
 
@@ -84,12 +83,17 @@
 
 /* Color of Toggler when collapsed */
 .navbar-toggler.collapsed .toggler-icon {
-    background-color: black;
+    background-color: #0FB2F2;
 }
 
-.navbar-expand-lg.navbar-nav.nav-link {
-    padding: 0;
-    margin-left: 1.5rem;
+/* Color of toggler icon when toggler is clicked (opened) */
+.navbar-toggler[aria-expanded="true"] .toggler-icon {
+    background-color: #0FB2F2;
+}
+
+/* Color of toggler icon when toggler is collapsed (closed) */
+.navbar-toggler:not([aria-expanded="true"]) .toggler-icon {
+    background-color: black;
 }
 
 .navbar-toggler {
