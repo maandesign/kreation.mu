@@ -109,22 +109,22 @@
 .navbar {
     padding-top: 15px; /* Add padding to the top of the navbar on the home page */
     padding-bottom: 15px;
-  }
+}
 
-  /* Custom CSS for scrollbar */
+/* Custom CSS for scrollbar */
 ::-webkit-scrollbar {
     width: 12px; /* Width of the scrollbar */
-  }
+}
   
-  /* Track (background) */
-  ::-webkit-scrollbar-track {
+/* Track (background) */
+::-webkit-scrollbar-track {
     background: #f1f1f1; /* Color of the scrollbar track */
-  }
+}
   
-  /* Handle (thumb) */
-  ::-webkit-scrollbar-thumb {
+/* Handle (thumb) */
+::-webkit-scrollbar-thumb {
     background: #0FB2F2; /* Color of the scrollbar thumb */
-  }  
+}
 
 @media (max-width: 767px) {
     .container {
@@ -133,3 +133,33 @@
     }
 }
 
+.service {
+    padding: 20px;
+    text-align: left;
+    transition: background-color 0.3s, color 0.3s;
+    cursor: pointer;
+    background-color: #f0f0f0;
+    color: black;
+}
+
+.selected {
+    background-color: #0FB2F2;
+    /* color: white; */
+}
+
+.service:hover:not(.selected) {
+    background-color: #0FB2F2;
+    /* color: white; */
+}
+
+.service-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-left: 13%;
+}
+
+.service-description {
+    color: black;
+    width: 75% !important;
+    margin-left: 13%;
+}

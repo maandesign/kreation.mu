@@ -1,9 +1,10 @@
-window.addEventListener('scroll', function() {
-    var navbar = document.querySelector('.navbar');
-  
-    if (window.scrollY > 10) {
-      navbar.classList.add('navbar-scrolled');
-    } else {
-      navbar.classList.remove('navbar-scrolled');
-    }
+document.addEventListener("DOMContentLoaded", function() {
+  const services = document.querySelectorAll('.service');
+
+  services.forEach(service => {
+      service.addEventListener('click', function() {
+          services.forEach(s => s.classList.remove('selected'));
+          this.classList.add('selected');
+      });
   });
+});
